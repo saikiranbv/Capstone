@@ -101,11 +101,15 @@ The models are trained on a dataset where purchases are very rare compared to no
 High accuracy is misleading as the models mostly predict "no purchase", which is correct most of the time only because purchases are rare.
 We can't rely on these models yet for: Accurately predicting purchases and Generating reliable product recommendations
 
-Next we compared the following Models from the surprise library
-	KNNBasic 
+### Next we compared the following Models from the surprise library
+	KNNBasic
+	
 	SVD - Singular Value Decomposition 
+	
 	NMF - Nonnegative matrix factorization 
+	
 	CoClustering 
+	
 	SlopeOne (collaborative filtering algorithms)
 
 ## Business Insights
