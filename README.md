@@ -147,5 +147,14 @@ Personalized Product Recommendations We can now predict how likely a customer is
 Algorithms like KNNBasic or SVD can recommend products based on similar users or purchase patterns. Impact: Higher conversion rates, increased AOV (Average Order Value), and customer satisfaction.
 
 We can also identify: Which products are repeat-purchased (sticky, high-loyalty) Which products are often co-purchased (cross-sell opportunities) Which users are heavy buyers of specific SKUs (VIP targeting)
+nventory & Merchandising Decisions
+
+Products predicted to have high purchase likelihood across many users can drive inventory stocking decisions.
+Conversely, low-scoring items might be deprioritized in display, promotion, or phased out.
+
+Segment users by predicted purchase patterns:
+1. High purchase likelihood - personalized emails, upsell
+2. Low purchase but similar interests - introduce promotions
+3. Cold-start users - recommend popular items or similar profile-based products
 
 We can use the code pred = best_algorithms['KNNBasic'].predict(visitorid='user123', itemid='item456') and based on the value predict. 
