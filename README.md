@@ -80,9 +80,46 @@ Here are the results:
 ### Random Forest:
 ![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Random_Forest.png)
 
+Linear Regression
+|Metric    | Value   | Comment                                                            |
+|----------|---------|--------------------------------------------------------------------|
+|Accuracy  | 0.9916  | Very high — but likely due to class imbalance                      |
+|Precision | 0.8125  | High precision — model is rarely wrong when it predicts a purchase |
+|Recall    | 0.0055  | Very low — model misses most purchases                             |
+|F1-Score  | 0.0109  | Almost useless — poor balance between precision and recall         |
 
+Random Forest
+
+|Metric    | Value   | Comment                                                            |
+|----------|---------|--------------------------------------------------------------------|
+|Accuracy  | 0.9870  | Also very high due to imbalance                                    | 
+|Precision | 0.1235  | Low — but better than random                                       |  
+|Recall    | 0.0897  | Catches more purchases than Linear Regression                      | 
+|F1-Score  | 0.1040  | Better than Linear Regression, but still weak overall              |
+
+The models are trained on a dataset where purchases are very rare compared to non-purchases.
+High accuracy is misleading as the models mostly predict "no purchase", which is correct most of the time only because purchases are rare.
+We can't rely on these models yet for: Accurately predicting purchases and Generating reliable product recommendations
+
+Next we compared the following Models from the surprise library
+	KNNBasic 
+	SVD - Singular Value Decomposition 
+	NMF - Nonnegative matrix factorization 
+	CoClustering 
+	SlopeOne (collaborative filtering algorithms)
 
 ## Business Insights
+
+Here are the results 
+|Algorithm     |Mean MSE      |Std MSE           |Training Time (s)   |Testing Time (s)   |
+|--------------|--------------|------------------|--------------------|-------------------|
+|KNNBasic      |14029.739822  |237.368458        | 114.583982         | 0.315372          |
+|SVD           |14029.739822  |227.553549        |  28.670742         | 0.066912          |
+|NMF           |14029.739822  |259.631642        | 110.013319         | 0.095390          |
+|CoClustering  |14029.739822  |249.112258        | 211.242633         | 0.177622          |
+|SlopeOne      |14036.135630  |221.138585        |   0.495969         | 0.206490          |
+
+Based on the results, here is the summary
 
 |Category                       |Best Option	|Justification                            |
 |-------------------------------|---------------|-----------------------------------------|
