@@ -23,7 +23,8 @@ The primary objective is to accurately predict item properties associated with “
 The data will be sourced from the publicly available RetailRocket Recommender System Dataset https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset which includes:
 
 	events.csv – records user interactions (view, add to cart, transaction)
-	item_properties_part1.csv and item_properties_part2.csv – describe time-stamped item properties  ( These are not loaded into the data folder due to thier size. Please refer to the kaggle site). 
+	item_properties_part1.csv and item_properties_part2.csv – describe time-stamped item properties
+	( These are not loaded into the data folder due to thier size. Please refer to the kaggle site). 
 	category_tree.csv – describes the hierarchical relationships between product categories
 
 Here are the number of records in each file
@@ -40,25 +41,25 @@ Number of unique transactions = 17,673
 As the Item data is hashed and category data is only a parent child relationship, most of the analysis is from Events data. 
 
 ### The Top 10 users are 
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Top_ten_Users.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/Top_ten_Users.png)
 
 ### The distribution by event type
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Event_type_count.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/Event_type_count.png)
 
 ### The distribution by event type in a Pie chart
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Event_tupe_pie.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/Event_tupe_pie.png)
 
 ### The Ten items that are viewed are 
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Top_ten_Viewed_Items.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/Top_ten_Viewed_Items.png)
 
 ### The Ten items that are added to cart are 
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Top_ten_Items_AddedtoCart.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/Top_ten_Items_AddedtoCart.png)
 
 ### The Ten items that are purchased are 
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/Top_ten_sold_items.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/Top_ten_sold_items.png)
 
 ### The distribution of Customers returning vs New
-![image](https://github.com/saikiranbv/CapstoneEDA/blob/main/images/ReturningUsersvsNew.png)
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/ReturningUsersvsNew.png)
 
 
 ## Modeling
@@ -122,6 +123,8 @@ Here are the results
 |NMF           |14029.739822  |259.631642        | 110.013319         | 0.095390          |
 |CoClustering  |14029.739822  |249.112258        | 211.242633         | 0.177622          |
 |SlopeOne      |14036.135630  |221.138585        |   0.495969         | 0.206490          |
+
+![image](https://github.com/saikiranbv/Capstone/blob/main/images/compare.png)
 
 Based on the results, here is the summary
 
